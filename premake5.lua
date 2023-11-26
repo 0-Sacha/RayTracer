@@ -1,27 +1,20 @@
-
--- WARNIG : need to change the target / obj dir for ImGui and GLFW || Wait for new UI interface --
-
 workspace "RayTracer"
 	platforms { "x64" }
 	configurations { "Debug", "Release", "Dist" }
+
 	startproject "RayTracer"
 
 	flags "MultiProcessorCompile"
 
 
-include "Helper.lua"
-
--- Defines
+include "PremakeUtilities/Utilities.lua"
 
 -- Include directories relative to WKS
-ProjectName = "RayTracer"
-Project["EngineCore"] 	= "%{wks.location}/EngineCore/"
-Project["Walnut"] 		= "%{wks.location}/Walnut/"
-Project["RayTracer"] 	= "%{wks.location}/RayTracer/"
+Solution.Name  = "RayTracer"
+Solution.Projects["ProjectCore"] 	= "%{wks.location}/ProjectCore/"
+Solution.Projects["Walnut"] 		= "%{wks.location}/Walnut/"
+Solution.Projects["RayTracer"] 		= "%{wks.location}/RayTracer/"
 
-include "EngineCore"
+include "ProjectCore"
 include "Walnut"
 include "RayTracer"
-
-filter "action:vs*"
-    CleanVSfiles()

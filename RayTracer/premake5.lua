@@ -5,8 +5,8 @@ project "RayTracer"
     cppdialect "C++20"
     staticruntime "Off"
 
-    targetdir 	(project_targetdir .. "/%{prj.name}")
-    objdir 		(project_objdir .. "/%{prj.name}")
+    targetdir 	(Solution.Path.ProjectTargetDirectory)
+	objdir 		(Solution.Path.ProjectObjectDirectory)
 
     files {
         "src/**.h",
@@ -18,17 +18,6 @@ project "RayTracer"
         "src/"
     }
 
-    IncludeAndLinkProject("EngineCore")
-    IncludeAndLinkProject("Walnut")
-
-    filter "system:windows"
-      defines { "WL_PLATFORM_WINDOWS" }
-
-    filter "configurations:Debug"
-        defines { "WL_DEBUG" }
-
-    filter "configurations:Release"
-        defines { "WL_RELEASE" }
-
-    filter "configurations:Dist"
-        defines { "WL_DIST" }
+    Solution.IncludeAndLinkProject("ProjectCore")
+    Solution.IncludeAndLinkProject("Walnut")
+        
