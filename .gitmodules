@@ -3,4 +3,4 @@
 	url = git@github-perso:0-Sacha/EngineCore.git
 [submodule "Walnut"]
 	path = Walnut
-	url = git@github-perso:0-Sacha/Walnut.git
+	url = git@github.com:0-Sacha/Walnut.git
