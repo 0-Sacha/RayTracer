@@ -1,4 +1,9 @@
 
+Solution.Projects["RayTracer"].ProjectDependencies = {
+	"ProjectCore",
+    "Walnut"
+}
+
 project "RayTracer"
     kind "ConsoleApp"
     language "C++"
@@ -18,6 +23,5 @@ project "RayTracer"
         "src/"
     }
 
-    Solution.IncludeAndLinkProject("ProjectCore")
-    Solution.IncludeAndLinkProject("Walnut")
+    Solution.Project("RayTracer")
         

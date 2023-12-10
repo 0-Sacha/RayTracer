@@ -11,9 +11,9 @@ include "PremakeUtilities/Utilities.lua"
 
 -- Include directories relative to WKS
 Solution.Name  = "RayTracer"
-Solution.Projects["ProjectCore"] 	= "%{wks.location}/ProjectCore/"
-Solution.Projects["Walnut"] 		= "%{wks.location}/Walnut/"
-Solution.Projects["RayTracer"] 		= "%{wks.location}/RayTracer/"
+Solution.AddProject("ProjectCore", "%{wks.location}/ProjectCore/")
+Solution.AddProject("Walnut",      "%{wks.location}/Walnut/")
+Solution.AddProject("RayTracer",   "%{wks.location}/RayTracer/")
 
 include "ProjectCore"
 include "Walnut"
