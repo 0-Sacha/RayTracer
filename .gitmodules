@@ -1,0 +1,9 @@
+[submodule "Walnut"]
+	path = Walnut
+	url = git@github.com:0-Sacha/Walnut.git
+[submodule "ProjectCore"]
+	path = ProjectCore
+	url = git@github.com:0-Sacha/ProjectCore.git
+[submodule "PremakeUtilities"]
+	path = PremakeUtilities
+	url = git@github.com:0-Sacha/PremakeUtilities.git

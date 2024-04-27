@@ -1,0 +1,15 @@
+
+# VS
+.vs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# VSCode
+.vscode
+
+# bin
+bin
+bin-int
+Makefile
